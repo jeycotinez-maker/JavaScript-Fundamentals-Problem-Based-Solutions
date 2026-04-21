@@ -37,3 +37,12 @@ body {
   box-shadow: var(--shadow);
   padding: 24px;
 }
+.warning-dialog {
+  width: min(92vw, 480px);
+  border: 1px solid #334155;
+  border-radius: 20px;
+  padding: 22px;
+  background: #0b1220;
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
