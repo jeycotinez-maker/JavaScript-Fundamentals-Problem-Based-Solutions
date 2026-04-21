@@ -4,3 +4,6 @@ const applyCapacityBtn = document.getElementById("applyCapacityBtn");
 const entryBtn = document.getElementById("entryBtn");
 const exitBtn = document.getElementById("exitBtn");
 const resetBtn = document.getElementById("resetBtn");
+const countDisplay = document.getElementById("countDisplay");
+const percentDisplay = document.getElementById("percentDisplay");
+const progressFill = document.getElementById("progressFill");
