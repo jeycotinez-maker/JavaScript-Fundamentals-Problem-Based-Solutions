@@ -10,3 +10,15 @@
   --purple: #7c3aed;
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(59, 130, 246, 0.18), transparent 30%),
+    linear-gradient(180deg, #020617, var(--bg));
+  color: var(--text);
+}
