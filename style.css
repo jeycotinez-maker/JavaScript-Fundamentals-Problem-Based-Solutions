@@ -64,3 +64,8 @@ body {
   color: #7dd3fc;
 }
 
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+}
