@@ -30,6 +30,15 @@ James manages a busy coffee shop and cannot safely rely on manual counting durin
 1. Put all three files in the same folder.
 2. Open `index.html` in your browser.
 3. Set the maximum capacity.
-4. Use the buttons to track people entering and leaving.
+4. Use the buttons to track people entering and leaving.s
 
+## How to Use
+- Start with the default capacity of 40.
+- Tap `+ Entry` when someone enters.
+- Tap `- Exit` when someone leaves.
+- When the app reaches 85%, a warning dialog appears.
+- Choose:
+- **Continue** to keep going.
+- **Stop Entry** to lock new entries until the count drops.
+- When the count reaches 100%, the app shows a red stop state.
 ## Accessibility
