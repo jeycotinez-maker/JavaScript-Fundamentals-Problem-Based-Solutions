@@ -21,4 +21,15 @@ James manages a busy coffee shop and cannot safely rely on manual counting durin
 - Reset button.
 - Responsive layout for desktop and mobile.
 
+## Files
+- `index.html`
+- `styles.css`
+- `script.js`
+
+## How to Run
+1. Put all three files in the same folder.
+2. Open `index.html` in your browser.
+3. Set the maximum capacity.
+4. Use the buttons to track people entering and leaving.
+
 ## Accessibility
