@@ -38,6 +38,16 @@
         <p class="helper-text">Set the legal room limit for the coffee shop.</p>
       </section>
 
+      <section class="meter-panel" aria-label="Occupancy status">
+        <div class="count-display" id="countDisplay" aria-live="polite">0 / 40</div>
+        <div class="percent-display" id="percentDisplay" aria-live="polite">0% occupied</div>
+
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <p class="alert-text" id="alertText" aria-live="polite">Occupancy is safe.</p>
+      </section>
 </body>
  <script src="script.js"></script>
 </html>
