@@ -20,3 +20,5 @@ James manages a busy coffee shop and cannot safely rely on manual counting durin
 - Warning dialog with **Continue** and **Stop Entry** choices.
 - Reset button.
 - Responsive layout for desktop and mobile.
+
+## Accessibility
