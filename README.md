@@ -43,4 +43,7 @@ James manages a busy coffee shop and cannot safely rely on manual counting durin
 - When the count reaches 100%, the app shows a red stop state.
 
 ## Accessibility
-The app does not rely on color alone. It uses text labels like SAFE, WARNING, and STOP so the meaning is clear even without color. The warning dialog is built using the native HTML `<dialog>` element for better accessibility and keyboard support. [web:40][web:56][web:69
+The app does not rely on color alone. It uses text labels like SAFE, WARNING, and STOP so the meaning is clear even without color. The warning dialog is built using the native HTML `<dialog>` element for better accessibility and keyboard support. [web:40][web:56][web:69]
+
+## Author
+## Jey Ann C. Siarot 
