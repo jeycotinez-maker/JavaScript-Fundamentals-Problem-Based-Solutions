@@ -12,3 +12,8 @@ const statusBadge = document.getElementById("statusBadge");
 const warningDialog = document.getElementById("warningDialog");
 const continueBtn = document.getElementById("continueBtn");
 const stopBtn = document.getElementById("stopBtn");
+
+let occupancy = 0;
+let capacity = 40;
+let entryLocked = false;
+let dialogShownForCurrentThreshold = false;
