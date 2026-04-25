@@ -100,3 +100,10 @@ h1 {
 .controls {
   margin-top: 18px;
 }
+
+.analysis-box {
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(8, 17, 31, 0.7);
+}
