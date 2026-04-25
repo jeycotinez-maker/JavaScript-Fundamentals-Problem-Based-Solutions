@@ -83,3 +83,13 @@ h1 {
   color: var(--muted);
   line-height: 1.5;
 }
+
+.badge {
+  min-width: 92px;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  border: 1px solid transparent;
+}
