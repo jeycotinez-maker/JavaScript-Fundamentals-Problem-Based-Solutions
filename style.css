@@ -130,3 +130,13 @@ label {
   grid-template-columns: 1fr auto;
   gap: 10px;
 }
+
+input[type="number"] {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #08111f;
+  color: var(--text);
+  font-size: 1rem;
+}
