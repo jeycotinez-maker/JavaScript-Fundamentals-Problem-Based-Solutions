@@ -124,3 +124,9 @@ label {
   margin-bottom: 8px;
   font-weight: 700;
 }
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
