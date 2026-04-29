@@ -164,3 +164,9 @@ input[type="number"]:focus {
   font-weight: 900;
   line-height: 1;
 }
+
+.percent-display {
+  margin-top: 10px;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
