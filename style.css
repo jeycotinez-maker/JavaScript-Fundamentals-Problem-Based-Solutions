@@ -151,3 +151,10 @@ input[type="number"]:focus {
   color: var(--muted);
   font-size: 0.95rem;
 }
+
+.meter-panel {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 22px;
+  background: rgba(8, 17, 31, 0.8);
+}
