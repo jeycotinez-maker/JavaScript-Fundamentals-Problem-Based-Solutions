@@ -214,3 +214,8 @@ input[type="number"]:focus {
 .secondary-btn:active {
   transform: translateY(1px);
 }
+
+.secondary-btn {
+  background: #334155;
+  color: white;
+}
