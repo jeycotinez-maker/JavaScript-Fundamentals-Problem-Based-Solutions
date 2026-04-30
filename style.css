@@ -186,3 +186,9 @@ input[type="number"]:focus {
   border-radius: 999px;
   transition: width 0.25s ease, background-color 0.25s ease;
 }
+
+.alert-text {
+  margin: 14px 0 0;
+  font-weight: 800;
+  line-height: 1.4;
+}
