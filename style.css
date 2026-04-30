@@ -209,3 +209,8 @@ input[type="number"]:focus {
   cursor: pointer;
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
+
+.primary-btn:active,
+.secondary-btn:active {
+  transform: translateY(1px);
+}
