@@ -192,3 +192,9 @@ input[type="number"]:focus {
   font-weight: 800;
   line-height: 1.4;
 }
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
