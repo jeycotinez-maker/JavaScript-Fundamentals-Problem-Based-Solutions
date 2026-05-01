@@ -284,3 +284,7 @@ input[type="number"]:focus {
 .warning-dialog::backdrop {
   background: rgba(2, 6, 23, 0.72);
 }
+
+.warning-dialog h2 {
+  margin: 0 0 10px;
+}
