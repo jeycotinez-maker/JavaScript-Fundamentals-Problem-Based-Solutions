@@ -240,3 +240,9 @@ input[type="number"]:focus {
   border-color: rgba(22, 163, 74, 0.35);
   color: var(--green);
 }
+
+.theme-warning .badge {
+  background: rgba(245, 158, 11, 0.14);
+  border-color: rgba(245, 158, 11, 0.35);
+  color: var(--orange);
+}
