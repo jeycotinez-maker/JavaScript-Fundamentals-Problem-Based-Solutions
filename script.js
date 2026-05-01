@@ -50,3 +50,9 @@ function getStatus(percent) {
     alert: "STOP — fire code capacity reached."
   };
 }
+
+function openWarningDialog() {
+  if (warningDialog.open) return;
+  warningDialog.showModal();
+  continueBtn.focus();
+}
