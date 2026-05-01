@@ -301,3 +301,32 @@ input[type="number"]:focus {
   gap: 12px;
   margin-top: 18px;
 }
+
+.dialog-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .badge {
+    align-self: flex-start;
+  }
+
+  .controls,
+  .input-row,
+  .dialog-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
