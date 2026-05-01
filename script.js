@@ -43,3 +43,10 @@ function getStatus(percent) {
       alert: entryLocked ? "Entry is locked. Warning threshold reached." : "Warning: approaching capacity."
     };
   }
+
+   return {
+    theme: "theme-danger",
+    badge: "STOP",
+    alert: "STOP — fire code capacity reached."
+  };
+}
