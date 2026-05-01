@@ -219,3 +219,8 @@ input[type="number"]:focus {
   background: #334155;
   color: white;
 }
+
+.exit-btn {
+  background: #475569;
+  color: white;
+}
