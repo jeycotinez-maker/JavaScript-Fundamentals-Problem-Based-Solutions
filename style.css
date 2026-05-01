@@ -229,3 +229,8 @@ input[type="number"]:focus {
   background: var(--purple);
   color: white;
 }
+
+.stop-btn {
+  background: var(--red);
+  color: white;
+}
