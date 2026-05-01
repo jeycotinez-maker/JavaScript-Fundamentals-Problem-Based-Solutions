@@ -234,3 +234,9 @@ input[type="number"]:focus {
   background: var(--red);
   color: white;
 }
+
+.theme-safe .badge {
+  background: rgba(22, 163, 74, 0.14);
+  border-color: rgba(22, 163, 74, 0.35);
+  color: var(--green);
+}
