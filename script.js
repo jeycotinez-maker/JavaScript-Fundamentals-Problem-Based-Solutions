@@ -22,3 +22,7 @@ function parseCapacity(rawValue) {
   const value = Number.parseInt(rawValue, 10);
   return Number.isFinite(value) && value >= 1 ? value : 1;
 }
+
+function getPercent() {
+  return Math.round((occupancy / capacity) * 100);
+}
