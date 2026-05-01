@@ -258,3 +258,9 @@ input[type="number"]:focus {
   color: var(--green);
   background: var(--green);
 }
+
+.theme-warning .progress-fill,
+.theme-warning .count-display {
+  color: var(--orange);
+  background: var(--orange);
+}
