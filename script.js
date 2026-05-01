@@ -17,3 +17,8 @@ let occupancy = 0;
 let capacity = 40;
 let entryLocked = false;
 let dialogShownForCurrentThreshold = false;
+
+function parseCapacity(rawValue) {
+  const value = Number.parseInt(rawValue, 10);
+  return Number.isFinite(value) && value >= 1 ? value : 1;
+}
