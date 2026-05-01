@@ -224,3 +224,8 @@ input[type="number"]:focus {
   background: #475569;
   color: white;
 }
+
+.reset-btn {
+  background: var(--purple);
+  color: white;
+}
