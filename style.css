@@ -252,3 +252,9 @@ input[type="number"]:focus {
   border-color: rgba(220, 38, 38, 0.35);
   color: var(--red);
 }
+
+.theme-safe .progress-fill,
+.theme-safe .count-display {
+  color: var(--green);
+  background: var(--green);
+}
