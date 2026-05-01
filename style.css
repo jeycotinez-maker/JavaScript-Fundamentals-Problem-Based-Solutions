@@ -294,3 +294,10 @@ input[type="number"]:focus {
   color: var(--muted);
   line-height: 1.55;
 }
+
+.dialog-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 18px;
+}
