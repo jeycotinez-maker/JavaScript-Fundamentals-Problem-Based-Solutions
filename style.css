@@ -264,3 +264,9 @@ input[type="number"]:focus {
   color: var(--orange);
   background: var(--orange);
 }
+ 
+.theme-danger .progress-fill,
+.theme-danger .count-display {
+  color: var(--red);
+  background: var(--red);
+}
