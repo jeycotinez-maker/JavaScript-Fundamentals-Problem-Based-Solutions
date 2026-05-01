@@ -56,3 +56,7 @@ function openWarningDialog() {
   warningDialog.showModal();
   continueBtn.focus();
 }
+
+function closeWarningDialog() {
+  if (warningDialog.open) warningDialog.close();
+}
