@@ -246,3 +246,9 @@ input[type="number"]:focus {
   border-color: rgba(245, 158, 11, 0.35);
   color: var(--orange);
 }
+
+.theme-danger .badge {
+  background: rgba(220, 38, 38, 0.14);
+  border-color: rgba(220, 38, 38, 0.35);
+  color: var(--red);
+}
