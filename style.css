@@ -288,3 +288,9 @@ input[type="number"]:focus {
 .warning-dialog h2 {
   margin: 0 0 10px;
 }
+
+.warning-dialog p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
