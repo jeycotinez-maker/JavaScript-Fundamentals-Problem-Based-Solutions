@@ -26,3 +26,14 @@ function parseCapacity(rawValue) {
 function getPercent() {
   return Math.round((occupancy / capacity) * 100);
 }
+
+function getStatus(percent) {
+  if (percent < 85) {
+    return {
+      theme: "theme-safe",
+      badge: "SAFE",
+      alert: entryLocked ? "Entry is locked. Someone must leave before new entry can continue." : "Occupancy is safe."
+    };
+  }
+
+  
