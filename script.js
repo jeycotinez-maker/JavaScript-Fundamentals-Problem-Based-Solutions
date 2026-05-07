@@ -67,3 +67,12 @@ function render() {
 
   const percent = getPercent();
   const status = getStatus(percent);
+
+   card.classList.remove("theme-safe", "theme-warning", "theme-danger");
+  card.classList.add(status.theme);
+
+  countDisplay.textContent = `${occupancy} / ${capacity}`;
+  percentDisplay.textContent = `${percent}% occupied`;
+  progressFill.style.width = `${percent}%`;
+  statusBadge.textContent = status.badge;
+  alertText.textContent = status.alert;
