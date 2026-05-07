@@ -108,3 +108,9 @@ function handleExit() {
 
   render();
 }
+
+
+function handleApplyCapacity() {
+  capacityInput.value = parseCapacity(capacityInput.value);
+  render();
+}
