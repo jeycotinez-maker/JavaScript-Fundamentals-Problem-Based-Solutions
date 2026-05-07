@@ -95,3 +95,8 @@ function handleEntry() {
   occupancy += 1;
   render();
 }
+
+
+function handleExit() {
+  occupancy = Math.max(0, occupancy - 1);
+
