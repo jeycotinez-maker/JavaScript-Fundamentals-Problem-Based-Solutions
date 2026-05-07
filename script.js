@@ -88,3 +88,10 @@ function render() {
     openWarningDialog();
   }
 }
+
+function handleEntry() {
+  if (entryLocked || occupancy >= capacity) return;
+
+  occupancy += 1;
+  render();
+}
