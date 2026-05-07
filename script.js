@@ -76,3 +76,15 @@ function render() {
   progressFill.style.width = `${percent}%`;
   statusBadge.textContent = status.badge;
   alertText.textContent = status.alert;
+
+   entryBtn.disabled = entryLocked || occupancy >= capacity;
+
+  if (percent < 85) {
+    entryLocked = false;
+    dialogShownForCurrentThreshold = false;
+    closeWarningDialog();
+  } else if (percent >= 85 && percent < 100 && !dialogShownForCurrentThreshold && !warningDialog.open) {
+    dialogShownForCurrentThreshold = true;
+    openWarningDialog();
+  }
+}
