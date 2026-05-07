@@ -149,3 +149,8 @@ capacityInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter") handleApplyCapacity();
 });
 
+warningDialog.addEventListener("cancel", () => {
+  closeWarningDialog();
+});
+
+render();
