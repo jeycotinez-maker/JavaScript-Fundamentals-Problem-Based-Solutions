@@ -100,3 +100,11 @@ function handleEntry() {
 function handleExit() {
   occupancy = Math.max(0, occupancy - 1);
 
+ if (getPercent() < 85) {
+    entryLocked = false;
+    dialogShownForCurrentThreshold = false;
+    closeWarningDialog();
+  }
+
+  render();
+}
