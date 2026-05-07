@@ -136,3 +136,8 @@ function handleStop() {
   closeWarningDialog();
   render();
 }
+
+entryBtn.addEventListener("click", handleEntry);
+exitBtn.addEventListener("click", handleExit);
+applyCapacityBtn.addEventListener("click", handleApplyCapacity);
+resetBtn.addEventListener("click", handleReset);
