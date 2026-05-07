@@ -60,3 +60,10 @@ function openWarningDialog() {
 function closeWarningDialog() {
   if (warningDialog.open) warningDialog.close();
 }
+
+function render() {
+  capacity = parseCapacity(capacityInput.value);
+  occupancy = Math.max(0, Math.min(occupancy, capacity));
+
+  const percent = getPercent();
+  const status = getStatus(percent);
