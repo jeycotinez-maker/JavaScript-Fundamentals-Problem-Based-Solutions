@@ -114,3 +114,13 @@ function handleApplyCapacity() {
   capacityInput.value = parseCapacity(capacityInput.value);
   render();
 }
+
+function handleReset() {
+  occupancy = 0;
+  capacity = 40;
+  entryLocked = false;
+  dialogShownForCurrentThreshold = false;
+  capacityInput.value = 40;
+  closeWarningDialog();
+  render();
+}
