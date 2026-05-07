@@ -124,3 +124,9 @@ function handleReset() {
   closeWarningDialog();
   render();
 }
+
+
+function handleContinue() {
+  closeWarningDialog();
+  render();
+}
