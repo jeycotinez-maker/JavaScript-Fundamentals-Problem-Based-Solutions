@@ -94,29 +94,10 @@ h1 {
   border: 1px solid transparent;
 }
 
-.analysis-box,
 .capacity-panel,
 .meter-panel,
 .controls {
   margin-top: 18px;
-}
-
-.analysis-box {
-  padding: 16px 18px;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: rgba(8, 17, 31, 0.7);
-}
-
-.analysis-box h2 {
-  margin: 0 0 8px;
-  font-size: 1.05rem;
-}
-
-.analysis-box p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.55;
 }
 
 label {
