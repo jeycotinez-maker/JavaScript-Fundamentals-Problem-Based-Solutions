@@ -130,3 +130,9 @@ function handleContinue() {
   closeWarningDialog();
   render();
 }
+
+function handleStop() {
+  entryLocked = true;
+  closeWarningDialog();
+  render();
+}
