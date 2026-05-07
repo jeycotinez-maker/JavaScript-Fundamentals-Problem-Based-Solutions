@@ -141,3 +141,6 @@ entryBtn.addEventListener("click", handleEntry);
 exitBtn.addEventListener("click", handleExit);
 applyCapacityBtn.addEventListener("click", handleApplyCapacity);
 resetBtn.addEventListener("click", handleReset);
+continueBtn.addEventListener("click", handleContinue);
+
+stopBtn.addEventListener("click", handleStop);
