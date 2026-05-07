@@ -142,5 +142,10 @@ exitBtn.addEventListener("click", handleExit);
 applyCapacityBtn.addEventListener("click", handleApplyCapacity);
 resetBtn.addEventListener("click", handleReset);
 continueBtn.addEventListener("click", handleContinue);
-
 stopBtn.addEventListener("click", handleStop);
+
+capacityInput.addEventListener("input", render);
+capacityInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") handleApplyCapacity();
+});
+
