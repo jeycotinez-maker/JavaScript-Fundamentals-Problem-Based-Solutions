@@ -232,22 +232,28 @@ input[type="number"]:focus {
   color: var(--red);
 }
 
-.theme-safe .progress-fill,
-.theme-safe .count-display {
-  color: var(--green);
+.theme-safe .progress-fill {
   background: var(--green);
 }
 
-.theme-warning .progress-fill,
-.theme-warning .count-display {
-  color: var(--orange);
+.theme-warning .progress-fill {
   background: var(--orange);
 }
 
-.theme-danger .progress-fill,
+.theme-danger .progress-fill {
+  background: var(--red);
+}
+
+.theme-safe .count-display {
+  color: var(--green);
+}
+
+.theme-warning .count-display {
+  color: var(--orange);
+}
+
 .theme-danger .count-display {
   color: var(--red);
-  background: var(--red);
 }
 
 .warning-dialog {
