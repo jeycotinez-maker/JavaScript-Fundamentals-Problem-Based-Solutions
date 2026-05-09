@@ -128,7 +128,7 @@ input[type="number"]:focus {
 
 .helper-text {
   margin: 8px 0 0;
-  color: var(--muted);
+  color: rgb(21, 243, 224);
   font-size: 0.95rem;
 }
 
@@ -142,7 +142,7 @@ input[type="number"]:focus {
 .percent-display {
   margin-top: 10px;
   font-size: 1.05rem;
-  color: var(--muted);
+  color: rgb(206, 71, 224);
 }
 
 .progress-track {
@@ -182,7 +182,7 @@ input[type="number"]:focus {
   font-weight: 800;
   cursor: pointer;
   transition: transform 0.15s ease, opacity 0.15s ease;
-}
+} 
 
 .primary-btn:active,
 .secondary-btn:active {
@@ -190,8 +190,8 @@ input[type="number"]:focus {
 }
 
 .secondary-btn {
-  background: #334155;
-  color: white;
+  background: #f0ce0f;
+  color: rgb(165, 7, 7);
 }
 
 .entry-btn {
@@ -262,7 +262,7 @@ input[type="number"]:focus {
   border-radius: 20px;
   padding: 22px;
   background: #0b1220;
-  color: var(--text);
+  color: rgb(27, 155, 240);
   box-shadow: var(--shadow);
 }
 
@@ -276,7 +276,7 @@ input[type="number"]:focus {
 
 .warning-dialog p {
   margin: 0;
-  color: var(--muted);
+  color: rgb(238, 112, 40);
   line-height: 1.55;
 }
 
