@@ -13,6 +13,9 @@ const warningDialog = document.getElementById("warningDialog");
 const continueBtn = document.getElementById("continueBtn");
 const stopBtn = document.getElementById("stopBtn");
 
+const fullDialog = document.getElementById("fullDialog");
+const fullOkBtn = document.getElementById("fullOkBtn");
+
 let occupancy = 0;
 let capacity = 40;
 let entryLocked = false;
@@ -32,7 +35,9 @@ function getStatus(percent) {
     return {
       theme: "theme-safe",
       badge: "SAFE",
-      alert: entryLocked ? "Entry is locked. Someone must leave before new entry can continue." : "Occupancy is safe."
+      alert: entryLocked
+        ? "Entry is locked. Someone must leave before new entry can continue."
+        : "Occupancy is safe."
     };
   }
 
@@ -40,7 +45,9 @@ function getStatus(percent) {
     return {
       theme: "theme-warning",
       badge: "WARNING",
-      alert: entryLocked ? "Entry is locked. Warning threshold reached." : "Warning: approaching capacity."
+      alert: entryLocked
+        ? "Entry is locked. Warning threshold reached."
+        : "Warning: approaching capacity."
     };
   }
 
@@ -53,55 +60,128 @@ function getStatus(percent) {
 
 function openWarningDialog() {
   if (warningDialog.open) return;
+
   warningDialog.showModal();
   continueBtn.focus();
 }
 
 function closeWarningDialog() {
-  if (warningDialog.open) warningDialog.close();
+  if (warningDialog.open) {
+    warningDialog.close();
+  }
+}
+
+function openFullDialog() {
+  if (fullDialog.open) return;
+
+  fullDialog.showModal();
+  fullOkBtn.focus();
+}
+
+function closeFullDialog() {
+  if (fullDialog.open) {
+    fullDialog.close();
+  }
 }
 
 function render() {
   capacity = parseCapacity(capacityInput.value);
+
   occupancy = Math.max(0, Math.min(occupancy, capacity));
 
   const percent = getPercent();
   const status = getStatus(percent);
 
-  card.classList.remove("theme-safe", "theme-warning", "theme-danger");
+  card.classList.remove(
+    "theme-safe",
+    "theme-warning",
+    "theme-danger"
+  );
+
   card.classList.add(status.theme);
 
   countDisplay.textContent = `${occupancy} / ${capacity}`;
+
   percentDisplay.textContent = `${percent}% occupied`;
+
   progressFill.style.width = `${percent}%`;
+
   statusBadge.textContent = status.badge;
+
   alertText.textContent = status.alert;
 
-  entryBtn.disabled = entryLocked || occupancy >= capacity;
+  /* count animation */
+  countDisplay.classList.remove("bump");
 
-  if (percent < 85) {
+  void countDisplay.offsetWidth;
+
+  countDisplay.classList.add("bump");
+
+  /* disable entry when full */
+  entryBtn.disabled =
+    entryLocked || occupancy >= capacity;
+
+  /* warning dialog */
+  if (
+    percent < 85
+  ) {
     entryLocked = false;
     dialogShownForCurrentThreshold = false;
+
     closeWarningDialog();
-  } else if (percent >= 85 && percent < 100 && !dialogShownForCurrentThreshold && !warningDialog.open) {
+  }
+
+  else if (
+    percent >= 85 &&
+    percent < 100 &&
+    !dialogShownForCurrentThreshold &&
+    !warningDialog.open
+  ) {
     dialogShownForCurrentThreshold = true;
+
     openWarningDialog();
+  }
+
+  /* FULL CAPACITY dialog */
+  if (
+    occupancy >= capacity &&
+    !fullDialog.open
+  ) {
+    openFullDialog();
+  }
+
+  /* close full dialog when space available */
+  if (
+    occupancy < capacity
+  ) {
+    closeFullDialog();
   }
 }
 
 function handleEntry() {
-  if (entryLocked || occupancy >= capacity) return;
+  if (
+    entryLocked ||
+    occupancy >= capacity
+  ) {
+    return;
+  }
 
   occupancy += 1;
+
   render();
 }
 
 function handleExit() {
-  occupancy = Math.max(0, occupancy - 1);
+  occupancy = Math.max(
+    0,
+    occupancy - 1
+  );
 
   if (getPercent() < 85) {
     entryLocked = false;
+
     dialogShownForCurrentThreshold = false;
+
     closeWarningDialog();
   }
 
@@ -109,45 +189,107 @@ function handleExit() {
 }
 
 function handleApplyCapacity() {
-  capacityInput.value = parseCapacity(capacityInput.value);
+  capacityInput.value =
+    parseCapacity(capacityInput.value);
+
   render();
 }
 
 function handleReset() {
   occupancy = 0;
+
   capacity = 40;
+
   entryLocked = false;
+
   dialogShownForCurrentThreshold = false;
+
   capacityInput.value = 40;
+
   closeWarningDialog();
+
+  closeFullDialog();
+
   render();
 }
 
 function handleContinue() {
   closeWarningDialog();
+
   render();
 }
 
 function handleStop() {
   entryLocked = true;
+
   closeWarningDialog();
+
   render();
 }
 
-entryBtn.addEventListener("click", handleEntry);
-exitBtn.addEventListener("click", handleExit);
-applyCapacityBtn.addEventListener("click", handleApplyCapacity);
-resetBtn.addEventListener("click", handleReset);
-continueBtn.addEventListener("click", handleContinue);
-stopBtn.addEventListener("click", handleStop);
+/* EVENT LISTENERS */
 
-capacityInput.addEventListener("input", render);
-capacityInput.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") handleApplyCapacity();
-});
+entryBtn.addEventListener(
+  "click",
+  handleEntry
+);
 
-warningDialog.addEventListener("cancel", () => {
-  closeWarningDialog();
-});
+exitBtn.addEventListener(
+  "click",
+  handleExit
+);
+
+applyCapacityBtn.addEventListener(
+  "click",
+  handleApplyCapacity
+);
+
+resetBtn.addEventListener(
+  "click",
+  handleReset
+);
+
+continueBtn.addEventListener(
+  "click",
+  handleContinue
+);
+
+stopBtn.addEventListener(
+  "click",
+  handleStop
+);
+
+fullOkBtn.addEventListener(
+  "click",
+  closeFullDialog
+);
+
+capacityInput.addEventListener(
+  "input",
+  render
+);
+
+capacityInput.addEventListener(
+  "keydown",
+  (event) => {
+    if (event.key === "Enter") {
+      handleApplyCapacity();
+    }
+  }
+);
+
+warningDialog.addEventListener(
+  "cancel",
+  () => {
+    closeWarningDialog();
+  }
+);
+
+fullDialog.addEventListener(
+  "cancel",
+  () => {
+    closeFullDialog();
+  }
+);
 
 render();

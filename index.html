@@ -31,7 +31,7 @@
 
       <section class="meter-panel" aria-label="Occupancy status">
         <div class="count-display" id="countDisplay" aria-live="polite">0 / 40</div>
-        <div class="percent-display" id="percentDisplay" aria-live="polite">0% occupied 0</div>
+        <div class="percent-display" id="percentDisplay" aria-live="polite">0% occupied </div>
 
         <div class="progress-track" aria-hidden="true">
           <div class="progress-fill" id="progressFill"></div>
@@ -49,18 +49,41 @@
   </main>
 
   <dialog id="warningDialog" class="warning-dialog" aria-labelledby="warningTitle" aria-describedby="warningMessage">
-    <h2 id="warningTitle">Warning: Approaching Capacity</h2>
+  <h2 id="warningTitle">Warning: Approaching Capacity</h2>
 
-       <p id="warningMessage">
-      The occupancy has reached the warning threshold. Do you want to continue counting people in,
-      or stop entry now?
-    </p>
+  <p id="warningMessage">
+    The occupancy has reached the warning threshold.
+    Do you want to continue counting people in,
+    or stop entry now?
+  </p>
 
-     <div class="dialog-actions">
-      <button class="secondary-btn" id="continueBtn" type="button" autofocus>Continue</button>
-      <button class="primary-btn stop-btn" id="stopBtn" type="button">Stop Entry</button>
-    </div>
-  </dialog>
+  <div class="dialog-actions">
+    <button class="secondary-btn" id="continueBtn" type="button" autofocus>
+      Continue
+    </button>
+
+    <button class="primary-btn stop-btn" id="stopBtn" type="button">
+      Stop Entry
+    </button>
+  </div>
+</dialog>
+
+<!-- FULL CAPACITY DIALOG -->
+
+<dialog id="fullDialog" class="warning-dialog">
+  <h2>STOP ENTRY</h2>
+
+  <p>
+    Maximum occupancy reached.
+    No more people can enter until someone exits.
+  </p>
+
+  <div class="dialog-actions">
+    <button class="primary-btn stop-btn" id="fullOkBtn">
+      OK
+    </button>
+  </div>
+</dialog>
 </body>
  <script src="script.js"></script>
 </html>
