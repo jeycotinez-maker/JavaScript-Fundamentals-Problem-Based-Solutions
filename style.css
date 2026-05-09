@@ -308,3 +308,13 @@ input[type="number"]:focus {
   }
 }
 
+.count-display {
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 800;
+}
+
+.primary-btn,
+.secondary-btn {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  padding: clamp(12px, 2vw, 18px);
+}
