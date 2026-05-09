@@ -41,7 +41,6 @@ body {
   box-shadow: var(--shadow);
   padding: 24px;
 }
-
 .warning-dialog {
   width: min(92vw, 480px);
   border: 1px solid #334155;
@@ -140,12 +139,6 @@ input[type="number"]:focus {
   background: rgba(8, 17, 31, 0.8);
 }
 
-.count-display {
-  font-size: clamp(2.6rem, 6vw, 4rem);
-  font-weight: 900;
-  line-height: 1;
-}
-
 .percent-display {
   margin-top: 10px;
   font-size: 1.05rem;
@@ -201,6 +194,11 @@ input[type="number"]:focus {
   color: white;
 }
 
+.entry-btn {
+  background: var(--green);
+  color: white;
+}
+
 .exit-btn {
   background: #475569;
   color: white;
@@ -245,7 +243,7 @@ input[type="number"]:focus {
   color: var(--orange);
   background: var(--orange);
 }
- 
+
 .theme-danger .progress-fill,
 .theme-danger .count-display {
   color: var(--red);
@@ -283,13 +281,6 @@ input[type="number"]:focus {
   margin-top: 18px;
 }
 
-.dialog-actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 18px;
-}
-
 @media (max-width: 640px) {
   .card {
     padding: 18px;
@@ -310,4 +301,3 @@ input[type="number"]:focus {
     grid-template-columns: 1fr;
   }
 }
-

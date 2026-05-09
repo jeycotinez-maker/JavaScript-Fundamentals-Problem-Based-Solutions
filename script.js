@@ -36,7 +36,7 @@ function getStatus(percent) {
     };
   }
 
-    if (percent < 100) {
+  if (percent < 100) {
     return {
       theme: "theme-warning",
       badge: "WARNING",
@@ -44,7 +44,7 @@ function getStatus(percent) {
     };
   }
 
-   return {
+  return {
     theme: "theme-danger",
     badge: "STOP",
     alert: "STOP — fire code capacity reached."
@@ -68,7 +68,7 @@ function render() {
   const percent = getPercent();
   const status = getStatus(percent);
 
-   card.classList.remove("theme-safe", "theme-warning", "theme-danger");
+  card.classList.remove("theme-safe", "theme-warning", "theme-danger");
   card.classList.add(status.theme);
 
   countDisplay.textContent = `${occupancy} / ${capacity}`;
@@ -77,7 +77,7 @@ function render() {
   statusBadge.textContent = status.badge;
   alertText.textContent = status.alert;
 
-   entryBtn.disabled = entryLocked || occupancy >= capacity;
+  entryBtn.disabled = entryLocked || occupancy >= capacity;
 
   if (percent < 85) {
     entryLocked = false;
@@ -96,11 +96,10 @@ function handleEntry() {
   render();
 }
 
-
 function handleExit() {
   occupancy = Math.max(0, occupancy - 1);
 
- if (getPercent() < 85) {
+  if (getPercent() < 85) {
     entryLocked = false;
     dialogShownForCurrentThreshold = false;
     closeWarningDialog();
@@ -108,7 +107,6 @@ function handleExit() {
 
   render();
 }
-
 
 function handleApplyCapacity() {
   capacityInput.value = parseCapacity(capacityInput.value);
@@ -124,7 +122,6 @@ function handleReset() {
   closeWarningDialog();
   render();
 }
-
 
 function handleContinue() {
   closeWarningDialog();
